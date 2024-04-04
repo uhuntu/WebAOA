@@ -1,0 +1,109 @@
+/*
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+@use 'third_party/javascript/angular_components/deprecated' as mat-deprecated;
+@use 'third_party/javascript/angular_components/material' as mat;
+
+// Core material styles
+@include mat-deprecated.all-legacy-component-typographies();
+@include mat.core();
+
+// Application theme
+$primary: mat.define-palette(mat.$grey-palette);
+$accent: mat.define-palette(mat.$blue-palette);
+$theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+    ),
+    density: 0,
+    typography: mat.define-typography-config(),
+  )
+);
+@include mat-deprecated.all-legacy-component-themes($theme);
+@include mat.divider-theme($theme);
+@include mat.radio-theme($theme);
+@include mat.checkbox-theme($theme);
+@include mat.dialog-theme($theme);
+@include mat.tooltip-theme($theme);
+@include mat.snack-bar-theme($theme);
+@include mat.table-theme($theme);
+@include mat.progress-spinner-theme($theme);
+@include mat.progress-bar-theme($theme);
+@include mat.paginator-theme($theme);
+@include mat.tabs-theme($theme);
+@include mat.autocomplete-theme($theme);
+@include mat.card-theme($theme);
+@include mat.input-theme($theme);
+@include mat.form-field-theme($theme);
+@include mat.core-theme($theme);
+@include mat.select-theme($theme);
+@include mat.list-theme($theme);
+@include mat.menu-theme($theme);
+
+// Typography
+$typography: mat-deprecated.define-legacy-typography-config();
+@include mat.radio-typography($typography);
+@include mat.checkbox-typography($typography);
+@include mat.dialog-typography($typography);
+@include mat.fab-typography($typography);
+@include mat.icon-button-typography($typography);
+@include mat.tooltip-typography($typography);
+@include mat.button-typography($typography);
+@include mat.snack-bar-typography($typography);
+@include mat.table-typography($typography);
+@include mat.progress-spinner-typography($typography);
+@include mat.progress-bar-typography($typography);
+
+// Button theme
+$button-primary: mat.define-palette(mat.$grey-palette);
+$button-accent: mat.define-palette(mat.$blue-palette, 700);
+$button-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $button-primary,
+      accent: $button-accent,
+    ),
+    density: 0,
+    typography: mat.define-typography-config(),
+  )
+);
+@include mat.button-theme($button-theme);
+@include mat.fab-theme($button-theme);
+@include mat.icon-button-theme($button-theme);
+
+// General styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+// TODO: This mixin provides styles that are changed in
+// cl/433641495 and should be removed after the change is submitted. This
+// preserves old styles that were applied to <mat-select>.
+// For more information, see go/angular-components/deprecated_styles
+@include mat.deprecated-select-display();
+
+// TODO: This mixin preserves the legacy checkbox size of
+// 16px and should be removed after the application migrates to the
+// MDC checkbox.
+@include mat.deprecated-pseudo-checkbox-size();
