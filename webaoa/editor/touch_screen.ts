@@ -27,7 +27,7 @@ const MAX_CLICK_MILLIS = 100;
 @Component({
   selector: 'touch-screen',
   templateUrl: './touch_screen.ng.html',
-  styleUrls: ['./touch_screen.css'],
+  styleUrls: ['./touch_screen.scss'],
 })
 export class TouchScreen {
   /** Starting timestamp and position of the current gesture. */

@@ -1,2 +1,17 @@
-// DO NOT EDIT see http://go/typescript/build_defs#ts-config-setup
-{"extends": "../../../../../blaze-bin/third_party/py/multitest_transport/tools/webaoa/tsconfig_editor.json"}
+{
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "es5",
+            "es2015.collection",
+            "es2015.iterable",
+            "es2015.promise",
+            "es2017"
+        ],
+        "rootDirs": [
+            ".",
+            "../dist/bin"
+        ],
+        "experimentalDecorators": true
+    }
+}

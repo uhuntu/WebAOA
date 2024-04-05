@@ -26,6 +26,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppComponent} from './app';
 import {DeviceModule} from './device/device_module';
 import {EditorModule} from './editor/editor_module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 /** Main application {@link NgModule}. */
 @NgModule({
@@ -43,6 +44,9 @@ import {EditorModule} from './editor/editor_module';
     MatTooltipModule,
   ],
   bootstrap: [AppComponent],
+  providers: [
+    provideAnimationsAsync()
+  ],
 })
 export class AppModule {
 }

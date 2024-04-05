@@ -30,7 +30,7 @@ export interface AoaActionEditorResult {
 @Component({
   selector: 'action-editor',
   templateUrl: './action_editor.ng.html',
-  styleUrls: ['./action_editor.css'],
+  styleUrls: ['./action_editor.scss'],
 })
 export class AoaActionEditor {
   COMMANDS: readonly AoaActionCommand[] = COMMANDS;

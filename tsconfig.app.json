@@ -6,9 +6,9 @@
     "types": []
   },
   "files": [
-    "src/main.ts"
+    "webaoa/main.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "webaoa/**/*.d.ts"
   ]
 }

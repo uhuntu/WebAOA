@@ -59,7 +59,7 @@ export const MAX_KEY_COMBINATION_MILLIS = 2000;
 @Component({
   selector: 'workflow-editor',
   templateUrl: './workflow_editor.ng.html',
-  styleUrls: ['./workflow_editor.css'],
+  styleUrls: ['./workflow_editor.scss'],
 })
 export class WorkflowEditor implements OnChanges, OnDestroy {
   readonly ENTER = Key.ENTER;

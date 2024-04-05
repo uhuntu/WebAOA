@@ -26,7 +26,7 @@ import {DeviceManager} from './device_manager';
 @Component({
   selector: 'device-list',
   templateUrl: './device_list.ng.html',
-  styleUrls: ['./device_list.css'],
+  styleUrls: ['./device_list.scss'],
 })
 export class DeviceList implements OnDestroy {
   private readonly destroy = new ReplaySubject<void>();

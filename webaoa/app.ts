@@ -15,6 +15,8 @@
  * limitations under the License.
  */
 
+/// <reference types="w3c-web-usb" />
+
 import {Component} from '@angular/core';
 
 import {AoaDevice} from './device/device';
@@ -26,7 +28,7 @@ declare var analyticsEnabled: boolean;
 @Component({
   selector: 'aoa-app',
   templateUrl: './app.ng.html',
-  styleUrls: ['./app.css'],
+  styleUrls: ['./app.scss'],
 })
 export class AppComponent {
   /** True if Google Analytics is enabled. */
