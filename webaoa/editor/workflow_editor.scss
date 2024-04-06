@@ -156,7 +156,7 @@ mat-list-item.action {
       of list that may no longer apply for the MDC version.
  */
 
-  ::ng-deep .mat-list-item-content {
+  ::ng-deep .mdc-list-item__content {
     align-items: center;
     box-sizing: border-box;
     display: flex;
@@ -164,6 +164,10 @@ mat-list-item.action {
     height: inherit;
     padding: 0 16px;
     position: relative;
+  }
+
+  ::ng-deep .mdc-list-item__primary-text {
+    display: flex;
   }
 
   mat-progress-bar {
