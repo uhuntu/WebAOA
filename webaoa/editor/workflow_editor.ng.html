@@ -141,22 +141,24 @@
     <mat-list-item class="action" *ngFor="let action of actions; index as i" cdkDrag>
       <mat-icon cdkDragHandle>drag_indicator</mat-icon>
       <span class="expression">{{action}}</span>
-      <button matListItemMeta mat-icon-button class="run" matTooltip="Run"
+      <div matListItemMeta>
+      <button mat-icon-button class="run" matTooltip="Run"
               [disabled]="isDeviceBusy || !device" (click)="executeActions([action])">
         <mat-icon>play_arrow</mat-icon>
       </button>
-      <button matListItemMeta mat-icon-button class="run-from" matTooltip="Run from here"
+      <button mat-icon-button class="run-from" matTooltip="Run from here"
               [disabled]="isDeviceBusy || !device" (click)="executeActions(actions.slice(i))">
         <mat-icon>playlist_play</mat-icon>
       </button>
-      <button matListItemMeta mat-icon-button class="edit" matTooltip="Edit"
+      <button mat-icon-button class="edit" matTooltip="Edit"
               [disabled]="isDeviceBusy" (click)="editAction(i)">
         <mat-icon>edit</mat-icon>
       </button>
-      <button matListItemMeta mat-icon-button class="delete" matTooltip="Delete"
+      <button mat-icon-button class="delete" matTooltip="Delete"
               [disabled]="isDeviceBusy" (click)="deleteAction(i)">
         <mat-icon>delete</mat-icon>
       </button>
+      </div>
       <div class="placeholder" *cdkDragPlaceholder></div>
       <mat-progress-bar mode="indeterminate" color="accent"
                         *ngIf="action === executing"></mat-progress-bar>
