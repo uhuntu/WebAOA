@@ -20,8 +20,8 @@
     <mat-icon matListItemIcon>smartphone</mat-icon>
     <div matListItemTitle class="product">{{device.manufacturerName}} {{device.productName}}</div>
     <div matListItemLine class="serial">{{device.serialNumber}}</div>
-    <div class="default-mode" *ngIf="!device.isAccessoryMode()">Default Mode</div>
-    <div class="accessory-mode" *ngIf="device.isAccessoryMode()">
+    <div matListItemMeta class="default-mode" *ngIf="!device.isAccessoryMode()">Default Mode</div>
+    <div matListItemMeta class="accessory-mode" *ngIf="device.isAccessoryMode()">
       Accessory Mode
       <ng-template [ngIf]="device.isAdbEnabled()">with ADB</ng-template>
     </div>
