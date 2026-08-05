@@ -17,7 +17,7 @@
 
 /// <reference types="w3c-web-usb" />
 
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 import {AoaDevice} from './device/device';
 
@@ -26,6 +26,8 @@ declare var analyticsEnabled: boolean;
 
 /** Main application {@link Component}. */
 @Component({
+  changeDetection: ChangeDetectionStrategy.Default,
+  standalone: false,
   selector: 'aoa-app',
   templateUrl: './app.ng.html',
   styleUrls: ['./app.scss'],
