@@ -21,7 +21,7 @@ import {ComponentFixture, fakeAsync, flush, TestBed, tick} from '@angular/core/t
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {By} from '@angular/platform-browser';
-import {getEl, getEls} from 'google3/third_party/py/multitest_transport/ui2/app/testing/jasmine_util';
+import {getEl, getEls} from '../testing/jasmine_util';
 import {of as observableOf} from 'rxjs';
 
 import {AoaDevice, Key, Point} from '../device/device';

@@ -17,7 +17,7 @@
 
 import {DebugElement} from '@angular/core';
 import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {getEl, getEls, hasEl} from 'google3/third_party/py/multitest_transport/ui2/app/testing/jasmine_util';
+import {getEl, getEls, hasEl} from '../testing/jasmine_util';
 import {Subject} from 'rxjs';
 
 import {AoaDevice} from './device';
