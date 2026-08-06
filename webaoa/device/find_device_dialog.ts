@@ -25,7 +25,8 @@ import {DeviceManager} from './device_manager';
  * user to reconnect the device.
  */
 @Component({
-  changeDetection: ChangeDetectionStrategy.Eager,standalone: false,
+  changeDetection: ChangeDetectionStrategy.Default,
+  standalone: false,
   template: `
     <h1 matDialogTitle>Device connection lost</h1>
     <div matDialogContent>

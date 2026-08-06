@@ -17,7 +17,7 @@
 
 import {DebugElement} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {getEl} from 'google3/third_party/py/multitest_transport/ui2/app/testing/jasmine_util';
+import {getEl} from '../testing/jasmine_util';
 
 import {Point} from '../device/device';
 

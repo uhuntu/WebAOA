@@ -15,13 +15,14 @@
  * limitations under the License.
  */
 
-import {NgModule, provideZoneChangeDetection} from '@angular/core';
+import {NgModule} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 
 import {AppComponent} from './app';
 import {DeviceModule} from './device/device_module';
@@ -40,7 +41,7 @@ import {EditorModule} from './editor/editor_module';
     MatToolbarModule,
     MatTooltipModule,
   ],
-  providers: [provideZoneChangeDetection()],
+  providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
 export class AppModule {

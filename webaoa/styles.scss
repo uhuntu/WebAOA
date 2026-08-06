@@ -13,28 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@use 'third_party/javascript/angular_components/deprecated' as mat-deprecated;
-@use 'third_party/javascript/angular_components/material' as mat;
+@use '@angular/material' as mat;
 
 // Core material styles
-@include mat-deprecated.all-legacy-component-typographies();
-@include mat.app-background();
-@include mat.elevation-classes();
+@include mat.core();
 
 // Application theme
-$primary: mat.m2-define-palette(mat.$m2-grey-palette);
-$accent: mat.m2-define-palette(mat.$m2-blue-palette);
-$theme: mat.m2-define-light-theme(
+$primary: mat.define-palette(mat.$grey-palette);
+$accent: mat.define-palette(mat.$blue-palette);
+$theme: mat.define-light-theme(
   (
     color: (
       primary: $primary,
       accent: $accent,
     ),
     density: 0,
-    typography: mat.m2-define-typography-config(),
+    typography: mat.define-typography-config(),
   )
 );
-@include mat-deprecated.all-legacy-component-themes($theme);
 @include mat.divider-theme($theme);
 @include mat.radio-theme($theme);
 @include mat.checkbox-theme($theme);
@@ -56,7 +52,7 @@ $theme: mat.m2-define-light-theme(
 @include mat.menu-theme($theme);
 
 // Typography
-$typography: mat-deprecated.define-legacy-typography-config();
+$typography: mat.define-legacy-typography-config();
 @include mat.radio-typography($typography);
 @include mat.checkbox-typography($typography);
 @include mat.dialog-typography($typography);
@@ -70,16 +66,16 @@ $typography: mat-deprecated.define-legacy-typography-config();
 @include mat.progress-bar-typography($typography);
 
 // Button theme
-$button-primary: mat.m2-define-palette(mat.$m2-grey-palette);
-$button-accent: mat.m2-define-palette(mat.$m2-blue-palette, 700);
-$button-theme: mat.m2-define-light-theme(
+$button-primary: mat.define-palette(mat.$grey-palette);
+$button-accent: mat.define-palette(mat.$blue-palette, 700);
+$button-theme: mat.define-light-theme(
   (
     color: (
       primary: $button-primary,
       accent: $button-accent,
     ),
     density: 0,
-    typography: mat.m2-define-typography-config(),
+    typography: mat.define-typography-config(),
   )
 );
 @include mat.button-theme($button-theme);
@@ -102,9 +98,9 @@ body {
 // cl/433641495 and should be removed after the change is submitted. This
 // preserves old styles that were applied to <mat-select>.
 // For more information, see go/angular-components/deprecated_styles
-@include mat.deprecated-select-display();
+// @include mat.deprecated-select-display();
 
 // TODO: This mixin preserves the legacy checkbox size of
 // 16px and should be removed after the application migrates to the
 // MDC checkbox.
-@include mat.deprecated-pseudo-checkbox-size();
+// @include mat.deprecated-pseudo-checkbox-size();

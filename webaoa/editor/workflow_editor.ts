@@ -57,10 +57,11 @@ export const MAX_KEY_COMBINATION_MILLIS = 2000;
  * on the selected device.
  */
 @Component({
-  changeDetection: ChangeDetectionStrategy.Eager,standalone: false,
+  changeDetection: ChangeDetectionStrategy.Default,
+  standalone: false,
   selector: 'workflow-editor',
   templateUrl: './workflow_editor.ng.html',
-  styleUrls: ['./workflow_editor.css'],
+  styleUrls: ['./workflow_editor.scss'],
 })
 export class WorkflowEditor implements OnChanges, OnDestroy {
   readonly ENTER = Key.ENTER;

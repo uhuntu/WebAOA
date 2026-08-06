@@ -28,10 +28,11 @@ export interface AoaActionEditorResult {
 
 /** Dialog used to edit AOA actions. */
 @Component({
-  changeDetection: ChangeDetectionStrategy.Eager,standalone: false,
+  changeDetection: ChangeDetectionStrategy.Default,
+  standalone: false,
   selector: 'action-editor',
   templateUrl: './action_editor.ng.html',
-  styleUrls: ['./action_editor.css'],
+  styleUrls: ['./action_editor.scss'],
 })
 export class AoaActionEditor {
   COMMANDS: readonly AoaActionCommand[] = COMMANDS;

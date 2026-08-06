@@ -25,10 +25,11 @@ const MAX_CLICK_MILLIS = 100;
 
 /** A device's touchscreen, capable of handling clicks and gestures. */
 @Component({
-  changeDetection: ChangeDetectionStrategy.Eager,standalone: false,
+  changeDetection: ChangeDetectionStrategy.Default,
+  standalone: false,
   selector: 'touch-screen',
   templateUrl: './touch_screen.ng.html',
-  styleUrls: ['./touch_screen.css'],
+  styleUrls: ['./touch_screen.scss'],
 })
 export class TouchScreen {
   /** Starting timestamp and position of the current gesture. */

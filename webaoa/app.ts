@@ -15,6 +15,8 @@
  * limitations under the License.
  */
 
+/// <reference types="w3c-web-usb" />
+
 import {Component, ChangeDetectionStrategy} from '@angular/core';
 
 import {AoaDevice} from './device/device';
@@ -24,10 +26,11 @@ declare var analyticsEnabled: boolean;
 
 /** Main application {@link Component}. */
 @Component({
-  changeDetection: ChangeDetectionStrategy.Eager,standalone: false,
+  changeDetection: ChangeDetectionStrategy.Default,
+  standalone: false,
   selector: 'aoa-app',
   templateUrl: './app.ng.html',
-  styleUrls: ['./app.css'],
+  styleUrls: ['./app.scss'],
 })
 export class AppComponent {
   /** True if Google Analytics is enabled. */

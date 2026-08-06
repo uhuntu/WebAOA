@@ -24,10 +24,11 @@ import {DeviceManager} from './device_manager';
 
 /** Displays a list of connected AOA-compatible devices to select from. */
 @Component({
-  changeDetection: ChangeDetectionStrategy.Eager,standalone: false,
+  changeDetection: ChangeDetectionStrategy.Default,
+  standalone: false,
   selector: 'device-list',
   templateUrl: './device_list.ng.html',
-  styleUrls: ['./device_list.css'],
+  styleUrls: ['./device_list.scss'],
 })
 export class DeviceList implements OnDestroy {
   private readonly destroy = new ReplaySubject<void>();
