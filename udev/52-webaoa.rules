@@ -1,0 +1,6 @@
+# Lets the logged-in user open Android devices over WebUSB (needed by WebAOA).
+# Install: ./udev/install.sh   (or copy to /etc/udev/rules.d/ and reload udev)
+# Add a line per vendor ID of your phone (see `lsusb`).
+
+# MediaTek (MACH_MP, 0e8d)
+SUBSYSTEM=="usb", ATTR{idVendor}=="0e8d", MODE="0660", GROUP="plugdev", TAG+="uaccess"

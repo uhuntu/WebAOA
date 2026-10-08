@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## USB permissions (Linux)
+
+Chrome needs permission to open the phone, otherwise connecting fails with
+`USBDevice.open(): Access denied`. Install the udev rule once:
+
+```bash
+./udev/install.sh
+```
+
+Edit `udev/52-webaoa.rules` to add your phone's vendor ID (`lsusb`) if it isn't MediaTek (0e8d).
